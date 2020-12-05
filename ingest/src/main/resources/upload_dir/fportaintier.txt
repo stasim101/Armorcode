@@ -1,0 +1,98 @@
+Run started:2020-11-06 09:09:10.542335
+
+Test results:
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: fportaintier\vulpy\bad\brute.py:3
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+2	
+3	import subprocess
+4	import sys
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: fportaintier\vulpy\bad\brute.py:21
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+20	for password in passwords:
+21	    result = subprocess.run([program, username, password], stdout=subprocess.DEVNULL)
+22	    if result.returncode == 0:
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: fportaintier\vulpy\bad\libsession.py:21
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+20	                session = json.loads(base64.b64decode(cookie))
+21	    except Exception:
+22	        pass
+
+--------------------------------------------------
+>> Issue: [B201:flask_debug_true] A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.
+   Severity: High   Confidence: Medium
+   Location: fportaintier\vulpy\bad\vulpy-ssl.py:29
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b201_flask_debug_true.html
+28	
+29	app.run(debug=True, host='127.0.1.1', ssl_context=('/tmp/acme.cert', '/tmp/acme.key'))
+
+--------------------------------------------------
+>> Issue: [B201:flask_debug_true] A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.
+   Severity: High   Confidence: Medium
+   Location: fportaintier\vulpy\bad\vulpy.py:55
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b201_flask_debug_true.html
+54	
+55	app.run(debug=True, host='127.0.1.1', port=5000, extra_files='csp.txt')
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: fportaintier\vulpy\good\libsession.py:22
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+21	        country = geo.country.iso_code
+22	    except Exception:
+23	        pass
+
+--------------------------------------------------
+>> Issue: [B201:flask_debug_true] A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.
+   Severity: High   Confidence: Medium
+   Location: fportaintier\vulpy\good\vulpy-ssl.py:29
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b201_flask_debug_true.html
+28	
+29	app.run(debug=True, host='127.0.1.1', ssl_context=('/tmp/acme.cert', '/tmp/acme.key'))
+
+--------------------------------------------------
+>> Issue: [B201:flask_debug_true] A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.
+   Severity: High   Confidence: Medium
+   Location: fportaintier\vulpy\good\vulpy.py:53
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b201_flask_debug_true.html
+52	
+53	app.run(debug=True, host='127.0.1.1', port=5001, extra_files='csp.txt')
+54	
+
+--------------------------------------------------
+>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: fportaintier\vulpy\utils\skey.py:24
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input
+23	    while True:
+24	        response = input('Enter the hash that follows ' + lastkey + ': ')
+25	        result = hashlib.new(ALGORITHM, response.encode()).hexdigest()
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 1556
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 4.0
+		Medium: 0.0
+		High: 5.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 4.0
+		High: 5.0
+Files skipped (0):

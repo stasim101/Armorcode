@@ -1,0 +1,28 @@
+Run started:2020-11-06 09:08:44.071912
+
+Test results:
+>> Issue: [B303:blacklist] Use of insecure MD2, MD4, MD5, or SHA1 hash function.
+   Severity: Medium   Confidence: High
+   Location: dvpwa\sqli\dao\user.py:41
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b303-md5
+40	    def check_password(self, password: str):
+41	        return self.pwd_hash == md5(password.encode('utf-8')).hexdigest()
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 539
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 1.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 1.0
+Files skipped (0):
