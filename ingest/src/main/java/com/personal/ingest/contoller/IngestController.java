@@ -75,7 +75,7 @@ public class IngestController {
 		String organization = restTemplate.getForObject(uri, String.class);
 		
 		// Get the corresponding token from application.properties
-		String TOPIC = env.getProperty(tool);
+		String TOPIC = tool;
 		String delimeter = env.getProperty(tool + "-del");
 
 		List<String> content = chunkCreationService.createFileChunks(file, delimeter);
