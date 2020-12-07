@@ -24,13 +24,7 @@ public class Bandit implements TenantSupport {
 	private String moreInfo;
 	private String tenantId;
 
-	public Bandit(String issue, String severity, String confidence, String location, String moreInfo, String tenantId) {
-		this.issue = issue;
-		this.severity = severity;
-		this.confidence = confidence;
-		this.location = location;
-		this.moreInfo = moreInfo;
-		this.tenantId = tenantId;
+	public Bandit() {
 	}
 
 	public int getId() {
