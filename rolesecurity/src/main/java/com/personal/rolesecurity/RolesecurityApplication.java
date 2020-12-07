@@ -34,7 +34,7 @@ public class RolesecurityApplication {
 			roleRepository.deleteAll();
 			
 			Role role = roleRepository.save(new Role("admin", "token", "google"));
-			userRepository.save(new User("test", "oauthuser111@gmail.com", role));
+			userRepository.save(new User("test", "stasim101@gmail.com", role));
 		};
 	}
 
