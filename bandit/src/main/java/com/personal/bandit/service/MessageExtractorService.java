@@ -30,39 +30,36 @@ public class MessageExtractorService {
 
 		MessageExtractorService ins = new MessageExtractorService();
 		String s = "Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.  "
-				+ " Severity: Low"
-				+ " Confidence: High "
-				+ " Location: fportaintier\\vulpy\\bad\\brute.py:3"
+				+ " Severity: Low" + " Confidence: High " + " Location: fportaintier\\vulpy\\bad\\brute.py:3"
 				+ " More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html"
-				+ "#b404-import-subprocess2  "
-				+ "3       import subprocess"
-				+ "4       import sys";
-		
+				+ "#b404-import-subprocess2  " + "3       import subprocess" + "4       import sys";
+
 		Bandit bandit = new Bandit();
 
 		String key = "More Info:";
-		bandit.setMoreInfo(StringUtils.substringAfter(s, key));
-		s = StringUtils.substringBefore(s, key);
-		
-		key = "Location:";
-		bandit.setLocation(StringUtils.substringAfter(s, key));
-		s = StringUtils.substringBefore(s, key);
-		
-		key = "Confidence:";
-		bandit.setConfidence(StringUtils.substringAfter(s, key));
+		bandit.setMoreInfo(StringUtils.substringAfter(s, key).trim());
 		s = StringUtils.substringBefore(s, key);
 
-		
+		key = "Location:";
+		bandit.setLocation(StringUtils.substringAfter(s, key).trim());
+		s = StringUtils.substringBefore(s, key);
+
+		key = "Confidence:";
+		bandit.setConfidence(StringUtils.substringAfter(s, key).trim());
+		s = StringUtils.substringBefore(s, key);
+
 		key = "Severity:";
-		bandit.setSeverity(StringUtils.substringAfter(s, key));
+		bandit.setSeverity(StringUtils.substringAfter(s, key).trim());
 		s = StringUtils.substringBefore(s, key);
 
 		key = "Issue:";
-		bandit.setIssue(StringUtils.substringAfter(s, key));
-		
-		
-		//ins.messageExtractor(s);	
-		
+		bandit.setIssue(StringUtils.substringAfter(s, key).trim());
 
+		// ins.messageExtractor(s);
+
+		String h = "2020-12-07 06:58:40.320  INFO 3428 --- [ntainer#0-0-C-1] c.p.bandit.service.KafkaConsumerService  : #### -> Consumed message -> Organization: google";
+		h = StringUtils.substringAfter(h, "Organization:").trim();
+
+		System.out.println(h);
 	}
 }
