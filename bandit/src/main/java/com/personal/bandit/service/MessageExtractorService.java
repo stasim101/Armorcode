@@ -48,8 +48,5 @@ public class MessageExtractorService {
 
 	}
 
-	public static void main(String[] args) {
 
-
-	}
 }

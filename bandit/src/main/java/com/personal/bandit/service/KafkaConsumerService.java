@@ -19,10 +19,10 @@ public class KafkaConsumerService {
 
 	@Autowired
 	private MessageExtractorService messageExtractorService;
-	
+
 	@Autowired
 	private BanditRepository banditRepository;
-	
+
 	@KafkaListener(topics = "bandit", groupId = "group_id")
 	public String consume(String message) throws IOException {
 		logger.info(String.format("Consumed message -> %s", message));
@@ -30,10 +30,4 @@ public class KafkaConsumerService {
 		return message;
 	}
 
-	public static void main(String[] args) {
-		
-	
-		
-	
-	}
 }
