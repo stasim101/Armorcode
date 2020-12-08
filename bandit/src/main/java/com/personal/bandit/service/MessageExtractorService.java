@@ -37,17 +37,6 @@ public class MessageExtractorService {
 				+ "#b404-import-subprocess2  "
 				+ "3       import subprocess"
 				+ "4       import sys";
-	
-		/*
-		 * String[] strArray = s.split("Issue:Severity:Confidence:More Info:");
-		 * 
-		 * //System.out.println(Arrays.toString(strArray));
-		 * 
-		 * System.out.println(strArray.length);
-		 * 
-
-		 * for(String str:strArray) System.out.println(str);
-		 */
 		
 		Bandit bandit = new Bandit();
 
