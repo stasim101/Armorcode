@@ -12,7 +12,7 @@ public class MessageExtractorService {
 	@Autowired
 	private BanditRepository banditRepository;
 
-	public void messageExtractor(String message) {
+	public void saveExtract(String message) {
 
 		if (message.contains("Organization:"))
 			tenant = StringUtils.substringAfter(message, "Organization:").trim();
@@ -43,17 +43,13 @@ public class MessageExtractorService {
 			bandit.setTenantId(tenant);
 
 			banditRepository.save(bandit);
+
 		}
 
 	}
 
 	public static void main(String[] args) {
 
-		String message = "Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.  "
-				+ " Severity: Low" + " Confidence: High " + " Location: fportaintier\\vulpy\\bad\\brute.py:3"
-				+ " More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html"
-				+ "#b404-import-subprocess2  " + "3       import subprocess" + "4       import sys";
 
-		
 	}
 }
