@@ -11,8 +11,6 @@ import com.personal.bandit.repository.BanditRepository;
 @Service
 public class KafkaConsumerService {
 
-	private final Logger logger = LoggerFactory.getLogger(KafkaConsumerService.class);
-
 	@Autowired
 	private MessageExtractorService messageExtractorService;
 
