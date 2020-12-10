@@ -14,9 +14,6 @@ public class KafkaConsumerService {
 	@Autowired
 	private MessageExtractorService messageExtractorService;
 
-	@Autowired
-	private BanditRepository banditRepository;
-
 	@KafkaListener(topics = "bandit", groupId = "group_id")
 	public String consume(String message) throws IOException {
 		messageExtractorService.saveExtract(message);
