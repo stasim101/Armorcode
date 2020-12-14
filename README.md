@@ -6,11 +6,6 @@ The data collected from multiple databases is stored in single DB using tenant a
 
 ```
 JDK 8+
-```
-```
 Maven 3.6+
-```
-
-```
 Spring Boot
 ```
