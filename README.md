@@ -14,7 +14,7 @@ PostgreSQL
 
 ```
 Spring Cloud
-Spring CLoud Netfix Eureka
+Spring Cloud Netfix Eureka
 Apache Kafka
 Hibernate
 Cache
