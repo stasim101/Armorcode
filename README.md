@@ -5,8 +5,8 @@ The data collected from multiple databases is stored in single DB using tenant a
 ## Prerequisites
 
 ```
-JDK 8+
-Maven 3.6+
+JDK 8
+Maven 3.6
 Spring Boot
 PostgreSQL
 ```
@@ -21,6 +21,12 @@ Cache
 ```
 
 ### Installation
+
+ - Install below mentioned software.
+```
+JDK 1.8
+```
+
 
  - Clone the repo using below mentioned command
 ```
