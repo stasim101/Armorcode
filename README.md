@@ -20,6 +20,9 @@ Hibernate
 Cache
 ```
 
-###Installation
+### Installation
 
  - Clone the repo using below mentioned command
+```
+ git clone https://github.com/stasim101/Armorcode.git
+```
