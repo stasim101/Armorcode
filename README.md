@@ -22,4 +22,4 @@ Cache
 
 ###Installation
 
- - Clone the repo
+ - Clone the repo using below mentioned command
