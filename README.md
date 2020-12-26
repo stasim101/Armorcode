@@ -34,3 +34,7 @@ PostgreSQL
 ```
  git clone https://github.com/stasim101/Armorcode.git
 ```
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
