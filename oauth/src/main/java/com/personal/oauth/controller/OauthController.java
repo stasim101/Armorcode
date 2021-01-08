@@ -20,5 +20,4 @@ public class OauthController {
 		 response.setHeader("Location", url);
 		 response.setStatus(302);
 	}
-
 }
