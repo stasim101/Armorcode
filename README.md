@@ -29,7 +29,6 @@ Maven 3.6 or above
 PostgreSQL
 ```
 
-
  - Clone the repo using below mentioned command
 ```
  git clone https://github.com/stasim101/Armorcode.git
