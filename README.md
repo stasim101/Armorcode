@@ -3,7 +3,6 @@ Armorcode is an application for providing security and services to an applicatio
 The data collected from multiple organizations are stored in single DB using multi-tenant approach using separation on the basis of organization column which contains organization name.
 
 ## Prerequisites
-
 ```
 JDK 8
 Maven 3.6
