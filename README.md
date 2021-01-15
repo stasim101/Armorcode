@@ -11,7 +11,6 @@ Spring Boot
 PostgreSQL
 ```
 ### Libraries
-
 ```
 Spring Cloud
 Spring Cloud Netfix Eureka
