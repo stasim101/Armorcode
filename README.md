@@ -19,7 +19,6 @@ Apache Kafka
 Hibernate
 Cache
 ```
-
 ### Installation
 
 Install below mentioned software.
