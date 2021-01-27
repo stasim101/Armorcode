@@ -4,7 +4,6 @@ The data collected from multiple organizations are stored in single DB using mul
 
 ## Prerequisites
 ```
-
 JDK 8
 Maven 3.6
 Spring Boot
