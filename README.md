@@ -6,7 +6,6 @@ The data collected from multiple organizations are stored in single DB using mul
 JDK 8
 Maven 3.6
 Spring Boot
-PostgreSQL
 ```
 ### Libraries
 ```
