@@ -12,7 +12,6 @@ Spring Boot
 Spring Cloud
 Spring Cloud Netfix Eureka
 Apache Kafka
-Hibernate
 Cache
 ```
 ### Installation
