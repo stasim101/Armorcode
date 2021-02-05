@@ -13,7 +13,6 @@ Spring Boot
 Spring Cloud
 Spring Cloud Netfix Eureka
 Apache Kafka
-Cache
 ```
 ### Installation
 Install below mentioned software.
